@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creative Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/'-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+
+<!-- GAB = TYU -->
+<!--BAG ABBB AAA BBB
+BAG ABBB AA BAG
+UYT YUUU TTT UUU UYT YUUU YY UYT -->
+
+<!--GABCDEF = TYUIOPZ -->
+<!-- TTOOPPO - IIUUYYT - OOIIUUY - OOIIUUY - TTOOPPO - IIUUYYT-->
+<body>
+  <h1>🎶 LEARN TO PLAY THE PIANO 🎶</h1>
+  <h2>hit the letter on your keyboard corresponding to the letter on the screen <br>(or tap on the piano)</h2><br>
+  <div class="dropdown">
+        <form>
+        <select name="list" id="list" accesskey="target">
+            <option value="none">select a song:</option>
+            <option value="one">Mary Had a Little Lamb</option>
+            <option value="two">Twinkle, Twimle Little Star</option>
+        </select>
+        <input type=button value="Select" onclick="optionClicked()" />
+        </form>
+        </div>
+    </div>
+    <div id="div"></div>
+        <script src="options.js"></script>
+        <link rel="stylesheet" href="dropdown.css">
+
+  <!--<div class='dropdown'>
+    <div class='title musicCursor'>select a song:<i class="fa fa-angle-right"></i></div>
+    
+    <div class='menu musicCursor hide'>
+      <option value = "non">opt 1</option>
+      <div class='option' id='option1'>Mary Had a Little Lamb</div>
+      <div class='option' id='option2'>Option 2</div>
+      <div class='option' id='option3'>Option 3</div>
+      <div class='option' id='option4'>Option 4</div>
+    </div>
+
+  </div>
+  <span id='result'></span>-->
+
+  <ul id="piano">
+    <li data-note="C3" class="key">
+      <div data-note="C#3" class="black-key">2 <span class="mytype"><i>C3#</i></span></div>
+      Q <span class="mytype"><i>C3</i></span>
+    </li>
+    <li data-note="D3" class="key">
+      <div data-note="D#3" class="black-key">3 <span class="mytype"><i>D3#</i></span></div>
+      W<span class="mytype"><i>D3</i></span>
+    </li>
+    <li data-note="E3" class="key">
+      E<span class="mytype"><i>E3</i></span>
+    </li>
+    <li data-note="F3" class="key">
+      <div data-note="F#3" class="black-key">5<span class="mytype"><i>F3#</i></span></div>
+      R<span class="mytype"><i>F3</i></span>
+    </li>
+    <li data-note="G3" class="key">
+      <div data-note="G#3" class="black-key">6<span class="mytype"><i>G3#</i></span></div>
+      T<span class="mytype"><i>G3</i></span>
+    </li>
+    <li data-note="A3" class="key">
+      <div data-note="A#3" class="black-key">7<span class="mytype"><i>A3#</i></span></div>
+      Y<span class="mytype"><i>A3</i></span>
+    </li>
+    <li data-note="B3" class="key">
+      U<span class="mytype"><i>B3</i></span>
+    </li>
+    <li data-note="C4" class="key">
+      <div data-note="C#4" class="black-key">9<span class="mytype"><i>C4#</i></span></div>
+      I<span class="mytype"><i>C4</i></span>
+    </li>
+    <li data-note="D4" class="key">
+      <div data-note="D#4" class="black-key">0<span class="mytype"><i>D4#</i></span></div>
+      O<span class="mytype"><i>D4</i></span>
+    </li>
+    <li data-note="E4" class="key">
+      P<span class="mytype"><i>E4</i></span>
+    </li>
+    <li data-note="F4" class="key">
+      <div data-note="F#4" class="black-key">S<span class="mytype"><i>F4#</i></span></div>
+      Z<span class="mytype"><i>F4</i></span>
+    </li>
+    <li data-note="G4" class="key">
+      <div data-note="G#4" class="black-key">D<span class="mytype"><i>G4#</i></span></div>
+      X<span class="mytype"><i>G4</i></span>
+    </li>
+    <li data-note="A4" class="key">
+      <div data-note="A#4" class="black-key">F<span class="mytype"><i>A4#</i></span></div>
+      C<span class="mytype"><i>A4</i></span>
+    </li>
+    <li data-note="B4" class="key">
+      V<span class="mytype"><i>B4</i></span>
+    </li>
+  </ul>
+<script>
+
+  function optionClicked(){
+    let userPicked = document.getElementById("list").value;
+    var div = document.getElementById("div");
+    if(userPicked == 'one'){
+        div.innerHTML = "UYT YUUU TTT UUU UYT YUUU YY UYT";
+    }else if(userPicked == 'two'){
+        div.innerHTML = "TTOOPPO - IIUUYYT - OOIIUUY - OOIIUUY - TTOOPPO - IIUUYYT";
+    }else{
+        alert("Are you sure you don't want to select a song?");
+    }
+}
+    /*function toggleClass(elem,className){
+  if (elem.className.indexOf(className) !== -1){
+    elem.className = elem.className.replace(className,'');
+  }
+  else{
+    elem.className = elem.className.replace(/\s+/g,' ') +   ' ' + className;
+  }
+  
+  return elem;
+}
+
+function toggleDisplay(elem){
+  const curDisplayStyle = elem.style.display;     
+        
+  if (curDisplayStyle === 'none' || curDisplayStyle === ''){
+    elem.style.display = 'block';
+  }
+  else{
+    elem.style.display = 'none';
+  }
+}
+
+
+function toggleMenuDisplay(e){
+  const dropdown = e.currentTarget.parentNode;
+  const menu = dropdown.querySelector('.menu');
+  const icon = dropdown.querySelector('.fa-angle-right');
+
+  toggleClass(menu,'hide');
+  toggleClass(icon,'rotate-90');
+}
+
+function handleOptionSelected(e){
+  toggleClass(e.target.parentNode, 'hide');     
+
+  const id = e.target.id;
+  const newValue = e.target.textContent + ' ';
+  const titleElem = document.querySelector('.dropdown .title');
+  const icon = document.querySelector('.dropdown .title .fa');
+
+
+  titleElem.textContent = newValue;
+  titleElem.appendChild(icon);
+  
+  //trigger custom event
+  document.querySelector('.dropdown .title').dispatchEvent(new Event('change'));
+  //setTimeout is used so transition is properly shown
+  setTimeout(() => toggleClass(icon,'rotate-90',0));
+}
+function handleTitleChange(e){
+  const result = document.getElementById('result');
+
+  result.innerHTML = 'The result is: ' + e.target.textContent;
+}
+//get elements
+const dropdownTitle = document.querySelector('.dropdown .title');
+const dropdownOptions = document.querySelectorAll('.dropdown .option');
+
+//bind listeners to these elements
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+document.querySelector('.dropdown .title').addEventListener('change',handleTitleChange);*/
+
+
+
+  </script>
+<script src="main.js"></script>
+</body>
+</html>

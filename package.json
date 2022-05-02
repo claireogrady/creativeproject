@@ -1,0 +1,27 @@
+{
+  "name": "tone-piano",
+  "version": "1.0.0",
+  "description": "using webpack npm tone.js to create a browser piano",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open --mode development",
+    "dev": "./node_modules/.bin/webpack -w --mode development",
+    "build": "./node_modules/.bin/webpack --mode production"
+  },
+  "keywords": [
+    "webpack",
+    "tone.js"
+  ],
+  "author": "Claire O'Grady",
+  "license": "MIT",
+  "devDependencies": {
+    "ton": "^10.3.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "node-emoji": "^1.11.0",
+    "tone": "^14.7.77"
+  }
+}

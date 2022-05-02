@@ -1,0 +1,133 @@
+ body {
+     //background-image: url("/img/small_check copy.jpg");
+     background: rgb(185, 207, 212);
+     font-family: 'Helvetica', sans-serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 25px;
+     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎶 </text></svg>")
+      16 0,
+    auto;;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 50px;
+    font-style: bold;
+    background: -webkit-radial-gradient(rgb(122, 48, 108), rgb(175, 170, 185));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 {
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.mytype {
+    font-weight: normal;
+    color: gray;
+    font-size: 10px;
+}
+.hide {
+    max-height: 0 !important;
+}
+
+
+.dropdown{
+    border: 1px solid black;
+    width: 10em;
+    margin-bottom: 1em;
+    font-family: 'Helvetica', sans-serif;
+
+}
+
+.dropdown .title{
+    margin: .3em .3em .3em .3em;    
+    width: 100%;
+}
+
+.dropdown .title .fa-angle-right{
+    float: right;
+    margin-right: .7em;
+    transition: transform .3s;
+}
+
+.dropdown .menu{
+    transition: max-height .5s ease-out;
+    max-height: 20em;
+    overflow: hidden;
+}
+
+.dropdown .menu .option{
+    margin: .3em .3em .3em .3em;
+    margin-top: 0.3em;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+}
+
+.dropdown .menu .option:hover{
+    background: gray;
+}
+
+.pointerCursor:hover{
+    cursor: pointer;
+}
+
+.rotate-90{
+    transform: rotate(90deg);
+}
+
+.musicCursor {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎶 </text></svg>")
+      16 0,
+    auto;
+}
+
+ ul {
+     list-style: none;
+     display: flex;
+}
+ ul .key {
+    //background-image: url("/img/small_check copy.jpg");
+    background:  white;
+     position: relative;
+     width: 70px;
+     height: 270px;
+     border: 1px solid black;
+     border-right: none;
+     //background: #fffff0;
+     border-radius: 5px;
+     box-shadow: 0px 3px 5px #666;
+     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎶 </text></svg>")
+      16 0,
+    auto;;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     padding-bottom: 10px;
+     font-weight: bold;
+}
+ ul .key:last-child {
+     border-right: 1px solid black;
+}
+ ul .black-key {
+     position: absolute;
+     top: -1px;
+     left: 37.5px;
+     width: 55px;
+     height: 180px;
+     background: black;
+     border-radius: 5px;
+     box-shadow: 0px 3px 5px #666;
+     z-index: 999;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     padding-bottom: 10px;
+     color: white; 
+}
